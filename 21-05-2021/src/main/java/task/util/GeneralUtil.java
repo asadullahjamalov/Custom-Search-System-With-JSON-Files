@@ -134,12 +134,11 @@ public class GeneralUtil {
         personHashMapKeySurname.clear();
         personHashMapKeyFatherName.clear();
         for (Person person : personList) {
-            personHashMapKeyName.put(person.getName(), person);
-            personHashMapKeySurname.put(person.getSurname(), person);
-            personHashMapKeyFatherName.put(person.getFatherName(), person);
+            personHashMapKeyName.put(person.getName()+person.getId(), person);
+            personHashMapKeySurname.put(person.getSurname()+person.getId(), person);
+            personHashMapKeyFatherName.put(person.getFatherName()+person.getId(), person);
         }
     }
-
 
 
 }
